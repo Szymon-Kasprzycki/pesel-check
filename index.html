@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdzanie numeru PESEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sprawdzanie poprawności numeru PESEL</h1>
+    <div class="check">
+        <label>Podaj numer PESEL: <input type="text" id="pesel"></label>
+        <label>Podaj płeć:</label>
+        <label><input class="gender_K" type="radio" name="gender" value="Kobieta">Kobieta</label>
+        <label><input class="gender_M" type="radio" name="gender" value="Mężczyzna">Mężczyzna</label>
+        <label>Data urodzenia: <input type="text" placeholder="dd.mm.rrrr" id="dateofbirth"></label>
+        <button class="start" onclick="check()">Sprawdź</button>
+    </div>
+    <div class="result">
+        <h2>Wynik:</h2>
+        <p>Data urodzenia: <span class="birth"></span></p>
+        <p>Płeć: <span class="sex"></span></p>
+        <p>Cyfra kontrolna: <span class="control"></span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
