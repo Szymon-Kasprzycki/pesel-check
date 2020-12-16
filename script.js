@@ -72,3 +72,22 @@ function check() {
         document.querySelector(`span.control`).innerHTML = `<span class="correct">POPRAWNA</span>`;
     }
 }
+
+function validate() {
+    const pesel = document.querySelector('#pesel');
+    console.log(pesel.value)
+    if (pesel.value.length != 11 && pesel.value.length != 0) {
+        pesel.style.border = `2px solid red`;
+        pesel.style.boxShadow = `0px 0px 10px 5px red`
+    } else if (pesel.value.length === 0) {
+        pesel.style.boxShadow = `none`
+        pesel.style.border = `1px solid rgba(0,0,0,.6)`;
+        pesel.style.borderRadius = `3px`
+    } else {
+        pesel.style.border = `2px solid green`
+        pesel.style.boxShadow = `0px 0px 10px 5px green`
+    }
+}
+
+
+pesel.addEventListener("keyup", validate, false);
